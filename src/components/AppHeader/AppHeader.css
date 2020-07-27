@@ -1,0 +1,18 @@
+.main-header {
+
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  color: rgb(41, 41, 41);
+
+}
+.main-header h1{
+  padding: 0 10px;
+}
+.main-header i{
+  font-size: 32px;
+  color: lightslategray;
+}

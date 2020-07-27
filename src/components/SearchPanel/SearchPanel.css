@@ -1,0 +1,8 @@
+.search-panel {
+  display: inline;
+  width: 75%;
+  
+}
+.form-control{
+  border-radius: 5px 0 0 5px;
+}

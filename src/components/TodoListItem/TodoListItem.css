@@ -1,0 +1,19 @@
+.todo-list-item-text {
+  display: inline-block;
+  width: 80%;
+}
+.todo-list-item button{
+  outline: none;
+  border: none;
+  background-color: inherit;
+}
+.todo-list-item button:avtive{
+
+  border: none;
+}
+.important-icon {
+  stroke: cadetblue
+}
+.delete-icon {
+  stroke: crimson;
+}
