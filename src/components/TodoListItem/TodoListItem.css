@@ -1,6 +1,12 @@
 .todo-list-item-text {
   display: inline-block;
   width: 80%;
+  cursor: pointer;
+}
+.todo-list-item-text.important {
+  font-weight: bold;
+  color: rgb(92, 202, 206);
+  font-size: 16px;
 }
 .todo-list-item button{
   outline: none;
@@ -16,4 +22,7 @@
 }
 .delete-icon {
   stroke: crimson;
+}
+.done {
+  text-decoration: line-through;
 }

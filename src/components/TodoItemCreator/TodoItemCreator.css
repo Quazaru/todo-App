@@ -1,0 +1,10 @@
+.TodoItemCreator {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+.TodoItemCreator button {
+  border: none;
+  border-radius: 0 5px 5px 0;
+}
