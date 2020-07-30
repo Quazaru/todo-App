@@ -10,17 +10,12 @@ class TodoListItem extends React.Component {
     };
   }
 
-  lableHandler() {
-    this.setState(() => ({ done: !this.state.done }));
-  }
-
-  importantMarkHandler() {
-    this.setState(() => ({ important: !this.state.important }));
-  }
-
   render() {
-    const { label, onDeleted } = this.props;
-    const { important, done } = this.state;
+    const {
+      label, onDeleted, onToggleImportant, onToggleDone,
+      important, done,
+    } = this.props;
+
     const classNames = {
       todoItem: 'todo-list-item ',
       todoItemText: 'todo-list-item-text ',
@@ -42,7 +37,7 @@ class TodoListItem extends React.Component {
       >
         <span
           className={classNames.todoItemText}
-          onClick={() => this.lableHandler()}
+          onClick={() => onToggleDone()}
         >
           { label }
         </span>
@@ -60,7 +55,7 @@ class TodoListItem extends React.Component {
         <button
           type="button"
           className={classNames.importantBtn}
-          onClick={() => this.importantMarkHandler()}
+          onClick={() => onToggleImportant()}
         >
           <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-exclamation-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />

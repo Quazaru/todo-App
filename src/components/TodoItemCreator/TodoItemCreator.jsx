@@ -11,14 +11,19 @@ class TodoItemCreator extends React.Component {
   }
 
   labelHandler = (event) => {
-    const text = event.target.value;
-    this.setState({label: text.toString()});
+    this.setState({label: event.target.value});
+  }
+  onSubmit = (event) => {
+    event.preventDefault();
+    this.props.onCreated(this.state.label)
+    this.setState({label: ''})
   }
 
   render() {
-    const { onCreated } = this.props;
     return (
-      <div className="TodoItemCreator">
+      <form className="TodoItemCreator"
+        onSubmit={this.onSubmit}
+      >
         <input
           className="TodoInput form-control"
           type="text"
@@ -28,15 +33,11 @@ class TodoItemCreator extends React.Component {
         />
         <button
           className="btn-info"
-          type="button"
-          onClick={() => {
-            onCreated(this.state.label)
-            this.setState({label: ''})
-          }}
+          type="submit"
         >
           Create!
         </button>
-      </div>
+      </form>
     );
   }
 }
