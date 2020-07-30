@@ -96,7 +96,7 @@ class App extends React.Component {
       newFilter.label = criterion.label;
       this.setState({filter: newFilter});
     } else if (criterion.label === '') {
-      let newFilter = this.state.filter;
+      let newFilter = {...this.state.filter};
       newFilter.label = criterion.label;
       this.setState({filter: newFilter});
     }

@@ -29,7 +29,7 @@ export default class ItemStatusFilter extends React.Component {
     return (
       <div className="btn-group">
         <button
-          className="btn btn-default"
+          className="btn btn-default active"
           type="button"
           onClick={this.filterHandler}
         >
@@ -43,7 +43,7 @@ export default class ItemStatusFilter extends React.Component {
           Active
         </button>
         <button
-          className="btn btn-default active"
+          className="btn btn-default"
           type="button"
           onClick={this.filterHandler}
         >
